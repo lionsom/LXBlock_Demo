@@ -12,6 +12,7 @@ How to use Block?
 ## 二、block简介<br>
 返回值类型(^block变量名)(形参列表) = ^(形参列表) {<br>
 };<br>
+
 调用Block保存的代码<br>
 block变量名(实参);<br>
 
@@ -22,3 +23,56 @@ Block的模式<br>
 1.无参数无返回值的Block<br>
 2.有参数无返回值的Block<br>
 3.有参数有返回值的Block<br>
+
+eg:<br>
+```
+/**
+ *  无参数无返回值的Block
+ */
+-(void)func1{
+    /**
+     *  void ：就是无返回值
+     *  emptyBlock：就是该block的名字
+     *  ()：这里相当于放参数。由于这里是无参数，所以就什么都不写
+     */
+    void (^emptyBlock)() = ^(){
+        NSLog(@"无参数,无返回值的Block");
+    };
+    emptyBlock();
+}
+```
+```
+有参数无返回值的Block
+/**
+     *  调用这个block进行两个参数相加
+     *
+     *  @param int 参数A
+     *  @param int 参数B
+     *
+     *  @return 无返回值
+     */
+    void (^sumBlock)(int ,int ) = ^(int a,int b){
+        NSLog(@"%d + %d = %d",a,b,a+b);
+    };
+    /**
+     *  调用这个sumBlock的Block，得到的结果是20
+     */
+    sumBlock(10,10);
+```
+
+```
+有参数有返回值的Block
+/**
+     *  有参数有返回值
+     *
+     *  @param NSString 字符串1
+     *  @param NSString 字符串2
+     *
+     *  @return 返回拼接好的字符串3
+     */    
+    NSString* (^logBlock)(NSString *,NSString *) = ^(NSString * str1,NSString *str2){
+        return [NSString stringWithFormat:@"%@%@",str1,str2];
+    };
+    //调用logBlock,输出的是 我是Block
+    NSLog(@"%@", logBlock(@"我是",@"Block"));
+```
