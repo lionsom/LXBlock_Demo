@@ -74,3 +74,20 @@ eg:<br>
     //调用logBlock,输出的是 我是Block
     NSLog(@"%@", logBlock(@"我是",@"Block"));
 ```
+
+
+## 三、block的使用 （具体看demo）
+
+1、block作为对象的属性
+
+
+2、block作为方法的参数
+
+
+3、block作为返回值
+
+
+
+
+如有侵权，请联系<br>
+邮箱：lionsom_lin@qq.com
