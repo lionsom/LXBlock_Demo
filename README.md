@@ -1,5 +1,5 @@
 # LXBlock_Demo
-How to use Block?
+How to use Block? 建议与编程思想一起看：LXProgrammeThought
 
 ## 我的博客地址：http://www.jianshu.com/p/02ba71b05ac1
 
